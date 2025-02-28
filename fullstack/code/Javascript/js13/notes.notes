@@ -1,0 +1,49 @@
+----------------async Function----------------
+    - async adn await keyword
+    - easy to understand
+    - async = async Function=> returns the promise
+
+    await=>
+        pauses the execution of the surrounding async Function untill the promise is setteled
+
+----------------apis ----------------
+
+API
+    - application prograrmming interface    
+    - api are like waiters
+     
+
+--------------JSON data------------------
+    - javascript object notation
+    - www.json.org
+    - accessing  json data
+        .JSON.parse(data) method
+            it is used to parse the data  into the js object
+        . JSON,stringify(json)
+            it is used to parse the js object into the JSON 
+
+-------------api testing tools-----------------
+
+    -Hoppscoth
+    -Postman
+
+--------------ajax--------------
+Asynchronous javascript and xml
+
+-------------https verbs--------------
+
+    - get
+    - post
+    - delete
+
+----------status code-------------
+    
+    200. ok
+    404. not found
+    400. bad request
+    500. internal server error
+
+---------URL------------
+
+
+    

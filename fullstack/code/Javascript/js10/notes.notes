@@ -1,0 +1,15 @@
+----------------------DOM events-------------
+events are the signals that something has occured
+
+    1. oncklick()
+        - when an  element is clicked
+        -only one function on the clicked
+
+    2. onmouseenter()
+    - whenever the cursor goes on the element events get active
+
+
+-------------event listeners--------------------    
+
+    - multiple function on the clicked or event triggering
+    

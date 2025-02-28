@@ -1,0 +1,92 @@
+------------------------Object literal-----------------------
+    
+    - they are used to store the key value pairs.
+    - property => (key, value)pair
+    - Object are the collection of the properties. 
+    eg.
+
+        let student = {
+            name : "Suraj Arun Sonawane",
+            cgpa : 8.23,
+            mis : 612303174
+        };
+        student
+        {name: 'Suraj Arun Sonawane', cgpa: 8.23, mis: 612303174}
+
+        student.mis
+        612303174
+
+        student.name
+        'Suraj Arun Sonawane'
+
+        student["cgpa"]
+        8.23
+
+        **** why we need square for accessing 
+
+        prop = "name"
+        'name'
+
+        student[prop]
+        'Suraj Arun Sonawane'
+
+        ###  js automatically converts the Object keys to string
+        ### even if made the number as a key, the number will converted to string.
+
+        ** ADD AND UPDATE THE VALUES
+            //change the name to sonawane suraj arun 
+            // add the city : pune
+            // gender : male
+
+        eg. 
+        student.name = "sonawane suraj arun"
+        'sonawane suraj arun'
+
+        student.city = "pune"
+        'pune'
+
+        student.gender = "male"
+        'male'
+
+        student
+        {name: 'sonawane suraj arun', cgpa: 8.23, mis: 612303174, city: 'pune',         gender: 'male'}
+
+        delete student.city
+        true
+
+        student
+        {name: 'sonawane suraj arun', cgpa: 8.23, mis: 612303174, gender: 'male'}
+
+
+-------------------nesting of objects ------------------------------\
+
+    eg.
+    
+        let info = {
+            aman: {
+                city : "delhi",
+                grade : "A" 
+            },
+            shraddha : {
+                grade: "B",
+                city : "pune"
+            },
+            karan : {
+                grade : "C",
+                city : "mumbai"
+            }
+        }
+
+        console.log(info);
+
+    output. 
+
+        nesting of the objects
+        {
+          aman: { city: 'delhi', grade: 'A' },
+          shraddha: { grade: 'B', city: 'pune' },
+          karan: { grade: 'C', city: 'mumbai' }
+        }
+
+----------------array of objects------------------------------\
+

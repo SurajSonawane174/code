@@ -1,0 +1,48 @@
+-------------------NODE js----------------------
+
+    - it is a javascript runtime environment
+    - it is used for the server side programing
+    - nodes js is not a language, framework, library
+    -  it is based on js
+
+---------------NODE REPL-------------
+    R-> read
+    E-> evaluate
+    P-> Print
+    L-> Loop
+
+---------------process--------------------
+
+    - process
+        this object provides the information about , and control over, the current node.js process.
+    
+    - process.argv 
+        returns the array containing the command line argument passed when node.js process was launched
+        
+------------------module in node----------------------
+
+    - require() => a built in function to include external module that exist in a seprate files
+    module.exports => a special object
+
+----------NPM-------------------
+
+    - node package manager
+    - we can imagine it as library of packages
+    - command line tool;
+
+----------------installing packages----------------
+
+    - node modules
+        the node module folder contains everyn install dependecies for your project
+
+
+    - package-lock.json
+        it records the exact version of every install dependecies, including its sub dependecies and their versions
+
+    - package.json
+        - package  json file contains descriptive and functional meta data about the project such as name version, and dependecies
+        - to make the package.json to some directory for this use npm init
+
+---------local vs global installation----------------
+    - npm install -g <package name>
+    - npm link<package name>      

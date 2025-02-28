@@ -1,0 +1,68 @@
+------------------jsx-------------
+    - javascript extension syntax
+    - it is not real js
+    - internally converted into the js
+    - it is done by the tool called babel
+    - jsx is a way of writing html in a javascript
+
+----------file ------------------
+
+    - src
+        ->assets
+        -> App.css  {this is file is for the styling the app.jsx}
+        -> App.jsx  {app is a component  which will include all the other component and will help to render them}
+        -> index.html  {the page that we will be visiting}
+
+-----------first component-------------
+    two steps 
+
+    - creating the component
+
+        function Title() {
+              return <h1>here is my first Component</h1>;
+        }
+    - rendering the component
+
+        -<Title></Title>
+        -<Title/>
+
+---------------import _ export------------------
+
+    -> import
+        import Title form "./Title.jsx"
+
+    ->Defualt export
+        -> used when single value is to be export
+        export defualt Title;  
+    
+    -> Named export
+        ->used when we are supposed to export the multiple things
+        export {Title, sum};
+
+----------------Writing Mark up in jsx-----------------------------
+    1. return the single root element
+    2. close all the tags
+    3. camelCase most of the things
+    4. we cant use the reserve keywords of the js in the jsx  eg. class -> className
+
+------------React Freagment----------------------
+    - Freagment let you group of childerns wihout adding the nodes to the DOM 
+    - <>
+        <Title />
+        <Title />
+        <Title />
+      </>
+
+-------------javascript in jsx with curly braces-------------------
+
+    - pure js
+    - we can use the curly braces to evaluate or do the function like the js
+    - it is usefull to handel with the variable and their values
+
+
+-----------structuring component---------------
+
+-----------props-----------
+props are the information taht you pass to a sjx tags
+<Product Title = "phone" price = "30k"/>
+<Product Title = "phone" price = {30k}/>

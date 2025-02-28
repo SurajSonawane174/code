@@ -1,0 +1,371 @@
+----------------------------MYSQL DATABASE---------------------------
+----------------------------------d------------------------------------
+
+    - MYSQL is the DATABASE and the sql is the language to study the MYSQL DATABASE.
+    - *DEFINE*
+        - it is the collection of the data that can be accessed easily. 
+
+    - *WHY DATABASES*
+        - can store the large data
+        - features like the security, scalability.
+        - easier to insert, update , delete the data.
+    
+    *DBMS*
+        - it is the addtional layer on the DATABASES.
+        - as there are many functions and other properties
+
+    *SQL vs NOSQL*
+        - --------------------------------------------------------------------------------------------- |
+          |                      SQL                   ||                  NOSQL                        |
+        - |---------------------------------------------------------------------------------------------|
+        1)| relational database                        ||  non relational database                      |
+        2)| data store in table form                   ||  data store in documented key-val, graph form | 
+        3)| eg. MYSQL, oracle                          ||  eg. MonfoDb                                  |
+        - ----------------------------------------------------------------------------------------------
+
+--------------------------------- SQL---------------------------------------------
+    *DEFINE*
+        - structure query language
+        - it is a programing language used to interact with relational database.
+    
+    *Table in SQL*
+        - colunms => design (schema)  =>{ type of data} =>{id , name, roll, marks}
+        - rows => tuple
+
+    *Installtions*
+        - MYSQL server.
+        - MYSQL workbench.
+    
+    *First database*
+        1. CREATE DATABASE db_name; => to craete the database 
+        2. DROP DATABASE db_name;   => to delete the database
+        3. USE db_name;             => start code of the  table creation or to perform any operation on the databases
+    
+        *First Table*
+            CREATE Table table_name(
+                colunm_name1 datatype constraint,
+                colunm_name2 datatype constraint,
+                colunm_name3 datatype constraint,
+            );
+
+            - inset command
+                INSERT INTO table_name
+                VALUES
+                (174, suraj, 20),
+                (115, cm, 19);
+
+            - to see the data
+                SELECT * FROM table_name    
+
+        *DATABASE QURIES*
+
+            CREATE DATABASE db_name;
+            CREATE DATABASE IF NOT EXISTS db_name;
+
+            CREATE DROP db_name;
+            CREATE DROP IF NOT EXISTS db_name;
+
+           SHOW DATABASE; =>{it shows all the information of all the databases}
+           SHOW TABLES; =>
+
+        *TABLE QURIES*
+
+            1) CREATE
+                CREATE Table table_name(
+                    colunm_name1 datatype constraint,
+                    colunm_name2 datatype constraint,
+                    colunm_name3 datatype constraint,
+                );
+
+                - it is used to create the table
+
+
+
+### **MySQL Data Types Chart**  
+#### **1. Integer Types (Whole Numbers)**  
+- `TINYINT` (1 byte) → Small integer (-128 to 127 or 0 to 255 for `UNSIGNED`) → Used for Boolean values, small counters.  
+- `SMALLINT` (2 bytes) → Small integer (-32,768 to 32,767) → Used for small numbers like age, status codes.  
+- `MEDIUMINT` (3 bytes) → Medium integer (-8,388,608 to 8,388,607) → Used for larger numeric IDs.  
+- `INT` / `INTEGER` (4 bytes) → Standard integer (-2,147,483,648 to 2,147,483,647) → Used for general-purpose numeric values.  
+- `BIGINT` (8 bytes) → Large integer (-9 quintillion to +9 quintillion) → Used for large numbers like timestamps.  
+
+#### **2. Floating-Point Types (Decimal Numbers - Approximate Values)**  
+- `FLOAT` (4 bytes) → Single-precision floating-point number → Used for scientific calculations, approximate values.  
+- `DOUBLE` (8 bytes) → Double-precision floating-point number → Used for more precise calculations.  
+- `DECIMAL(M, D)` / `NUMERIC(M, D)` → Exact fixed-point decimal storage → Used for precise monetary values.  
+
+#### **3. Date & Time Types**  
+- `DATE` (3 bytes) → Stores date (`YYYY-MM-DD`) → Used for birthdates, joining dates.  
+- `DATETIME` (8 bytes) → Stores date and time (`YYYY-MM-DD HH:MM:SS`) → Used for timestamps, event records.  
+- `TIMESTAMP` (4 bytes) → Stores UNIX timestamp (UTC-based) → Used for automatic date-time tracking.  
+- `TIME` (3 bytes) → Stores time (`HH:MM:SS`) → Used for durations, time of day.  
+- `YEAR` (1 byte) → Stores year (`YYYY`) → Used for storing only the year.  
+
+#### **4. String Types (Text & Binary Data)**  
+- `CHAR(N)` (0-255) → Fixed-length string → Used for fixed-size codes (e.g., country codes).  
+- `VARCHAR(N)` (0-65535) → Variable-length string → Used for general text storage (names, addresses).  
+- `TEXT` (0-4GB) → Large text storage (`TINYTEXT`, `TEXT`, `MEDIUMTEXT`, `LONGTEXT`) → Used for articles, descriptions.  
+- `BLOB` (0-4GB) → Binary large object (`TINYBLOB`, `BLOB`, `MEDIUMBLOB`, `LONGBLOB`) → Used for images, files, multimedia.  
+
+#### **5. Bit & J   SON Types (Binary & Structured Data)**  
+- `BIT(N)` → Stores binary values (0s and 1s) → Used for flags, binary settings.  
+- `BOOLEAN` (Alias for `TINYINT(1)`) → Stores `TRUE` (1) or `FALSE` (0) → Used for Boolean values.  
+- `JSON` → Stores JSON formatted data → Used for semi-structured data.  
+
+
+
+
+### **MySQL Constraints Chart**
+
+#### **1. PRIMARY KEY**
+- Ensures that each rows  in a table has a unique identifier.
+- **Automatically creates a unique index.**
+- **Syntax:**  
+  ```sql
+  CREATE TABLE students (
+      id INT PRIMARY KEY,
+      name VARCHAR(100)
+  );
+    
+  OR
+
+  CREATE TABLE students (
+      id INT NOT NULL,
+      name VARCHAR(100),
+      PRIMARY KEY(id)
+  );
+  ```
+- **Usage:** Used for uniquely identifying each record in a table.
+
+---
+
+#### **2. FOREIGN KEY**
+- Establishes a relationship between two tables.
+- Prevents action that would destroy the link between the tables.
+- dusere table ki PRIMARY key in other table known as FOREIGN key
+- there can be multiple fk's
+- **Syntax:**  
+  ```sql
+  CREATE TABLE orders (
+      order_id INT PRIMARY KEY,
+      customer_id INT,
+      FOREIGN KEY (customer_id) REFERENCES customers(id)
+  );
+  ```
+- **Usage:** Links records in one table to another.
+
+---
+
+#### **3. UNIQUE**
+- Ensures that all values in a column are distinct.
+- **Syntax:**  
+  ```sql
+  CREATE TABLE users (
+      email VARCHAR(255) UNIQUE
+  );
+  ```
+- **Usage:** Used for columns like email, phone numbers, or usernames.
+
+---
+
+#### **4. NOT NULL**
+- Prevents a column from having `NULL` values.
+- **Syntax:**  
+  ```sql
+  CREATE TABLE employees (
+      emp_id INT NOT NULL,
+      name VARCHAR(100) NOT NULL
+  );
+  ```
+- **Usage:** Ensures mandatory fields always have a value.
+
+---
+
+#### **5. CHECK**
+- Ensures that values in a column meet a specific condition.
+- **Syntax:**  
+  ```sql
+  CREATE TABLE products (
+      price DECIMAL(10,2) CHECK (price > 0)
+  );
+  ```
+- **Usage:** Used for validating input like price > 0, age > 18, etc.
+
+---
+
+#### **6. DEFAULT**
+- Assigns a default value to a column if no value is provided.
+- **Syntax:**  
+  ```sql
+  CREATE TABLE students (
+      status VARCHAR(20) DEFAULT 'Active'
+  );
+  ```
+- **Usage:** Used to set default values like ‘Active’, ‘Pending’, or default timestamps.
+
+---
+
+#### **7. AUTO_INCREMENT**
+- Automatically generates unique values for numeric columns.
+- **Only applicable to `INT` types.**
+- **Syntax:**  
+  ```sql
+  CREATE TABLE employees (
+      emp_id INT PRIMARY KEY AUTO_INCREMENT,
+      name VARCHAR(100)
+  );
+  ```
+- **Usage:** Used for `id` fields in tables where unique numbering is required.
+
+---
+
+#### **8. INDEX**
+- Improves search performance.
+- **Syntax:**  
+  ```sql
+  CREATE INDEX idx_name ON students(name);
+  ```
+- **Usage:** Used to speed up queries on large tables.
+
+---
+
+This should be easy to copy and paste into your notes! Let me know if you need modifications. 🚀
+
+            2) INSERT
+                INSERT INTO table_name
+                (colname1, colunm_name2)=>{sequense}
+                VALUES
+                (174, suraj, 20),
+                (115, cm, 19);
+            3) SELECT
+                - SELECT col1, col2, col3 FROM table_name;
+                - SELECT * FROM table_name; => { to see all the information in the table}
+                - SELECT DISTINCT age FROM table_name;
+            4) UPDATE
+                - it is used to update the existing table
+                UPDATE table_name 
+                SET col1 = val1, col2 = val2
+                WHERE condition;    
+
+
+            5) ALTER
+                - it is used to change the schema
+                - it means modifications in columns and operation related to the column
+                a) ADD Column
+                    ALTER TABLE table_name
+                    ADD COLUMN colname datatype Constraints;
+                b) DROP column
+                    ALTER TABLE table_name
+                    DROP COLUMN colname;
+
+                c) RENAME TABLE
+                    ALTER TABLE table_name
+                    RENAME TO new_table_name;
+
+                d) CHANGE Column(rename the col)
+                    ALTER TABLE table_name
+                    CHANGE COLUMN OLDNAME  NEWNAME NEW datatype NEW_CONSTAINTS;
+                
+                e) MODIFY column
+                    ALTER TABLE table_name
+                    MODIFY colname new_datatype new_constaint;
+            6) TRUNCATE
+                - It is used when we want to delete all the data from the table 
+                TRUNCATE TABLE table_name;
+            7) DELETE 
+                - IT means delete the existing rows.
+                - DELETE FROM table_name
+                 WHERE condition;
+                - if we dont uses the where condition statement then it will delete all the rows from the table
+
+
+*CLAUSES*  
+    - this are the set of conditions using we can get some info 
+
+    1) WHERE CLAUSE
+        - to define some condition
+        SELECT col1 , col2 FROM table_name
+        WHERE condition;
+
+        eg. SELECT * FROM user
+            WHERE followers >=400;SELECT * FROM user
+            WHERE followers >=400;
+        
+        #OPERATORS#
+
+            1) arithmatic operators =>  {+, -, /, *,%}
+            2) comparitson operators => {=. !=. <, > ,<=, >=}
+            3) logical operators => {AND, OR , NOT, IN, BETWEEN, ALL, LIKE, ANY}
+            4) bitwise operators => {&, |}
+            
+            \\ logical OPERATORS
+                1) AND => it checks both the values
+                2) OR => to check one of the condition to be TRUE
+                3) BETWEEN => selects for the given range
+                4) NOT =>  to negate the given condition
+                5) IN => matches any value in the given list
+
+            eg. 
+            SELECT * FROM user
+            WHERE followers >=400;
+            SELECT name FROM user
+            WHERE followers >=400;
+            SELECT * FROM user 
+            WHERE age + 1 = 18;
+            SELECT * FROM user
+            WHERE age BETWEEN 15 AND 16;
+            SELECT name , age , followers FROM user
+            WHERE email IN ("surajsonawane267@gamil.com", "adam17@gamil.com");
+
+    2) LIMIT CLAUSE
+        - it adds the condition on total number of rows return;
+        - sets an upper limit for the number of tupples(rows) to be returned;
+        eg. SELECT * FROM user
+           LIMIT number;
+           
+
+    3) ORDER BY CLAUSE
+        - to sorting in ascending(ASC) or descending order()DESC
+        - SELECT * FROM user
+        ORDER BY colunm_name ASC; 
+        - DEFAULT IS ASC;
+    
+    4) GROUP BY CLAUSE
+        - it groups the rows that have same values into summary rows
+        - it collects data from multiple records and group the result   by one or more columns
+        - SELECT col1, col2
+          FROM table_name
+          GROUP BY colunm_name
+
+    5) HAVING CLAUSE
+        - similar to WHERE CLAUSE i.e applies some conditions on rows
+        - but it is used only when we want to apply the  condition after grouping 
+        SELECT col1, col2
+        FROM table_name
+        GROUP BY colunm_name
+        HAVING condition;
+        - WHERE is for the table and HAVING is for the GROUP
+        - grouping is nesseccary for the HAVING
+
+
+    *GENERAL ORDER FOR USING THE CLAUSES*
+        SELECT columns
+        FROM table_name
+        WHERE condition
+        GROUP BY columns
+        HAVING condition
+        ORDER BY columns ASC;
+
+*  AGREGATE FUNCTIONS*
+
+    - agregate functions are the predefined functions in the sql
+    -   agregate functions performes the calculation on set of values and return the single value;
+    
+    1) COUNT()
+    2) MAX()
+    3) MIN()
+    4) SUM()
+    5) AVG()
+
+    eg. SELECT MAX(marks) FROM students;
+

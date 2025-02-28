@@ -1,0 +1,22 @@
+--------------------array methods-----------------------
+
+    1. for each ()
+        - it is useful for applying the method for all the elements of the array
+
+        arr.forEach(some function definition or name)
+
+    2. map 
+
+        - let newarr = arr.map(some function definition or name)
+        - same as of for each loop but the differance is it makes the new array of the values that are return by the opration performed on each elements 
+        - and the size of the newarr is same as of the  orignal array.
+        - and if function does not return any value it will assgine the values as undefined
+
+
+    3. filter function
+
+        - let newarr = arr.filter(some function definition
+        or name)
+        - if callback function give output as a true then it will element will get added to the newarr
+        else not
+        

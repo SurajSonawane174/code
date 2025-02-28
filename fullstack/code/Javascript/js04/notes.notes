@@ -1,0 +1,25 @@
+-----------------------------------loops-------------------------------------
+1. for loop
+    for(initialisation; condition; updataion){
+        //do something;
+    }
+
+2. nested loops
+
+    loop in a loop
+
+3. while loops
+
+    while(condition){
+        //do something;
+    }
+
+4. break statement
+
+    - break;
+    - it come out of the loop
+
+5. for of loop
+
+    - it is useful when we are trying to access the collection of the items
+    

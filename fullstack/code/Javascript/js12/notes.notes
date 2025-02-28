@@ -1,0 +1,44 @@
+--------------promises in javascript----------
+    - promise object represents the eventual completion (or failuar) of an asynchronous operationand its resulting value.
+
+
+    eg. of the callback hell
+
+        {
+            function savetodata(data, success, failuar){
+    let internet = Math.floor(Math.random()*10) + 1;
+    if(internet >= 4){
+        success();
+        
+    }
+    else {
+        failuar();
+    }
+};
+let success = ()=>{
+    console.log("your data was saved");
+    savetodata("aparna", ()=>{
+        console.log("success 2: data 2 saved");
+    }, ()=>{
+        console.log("failuar 2: data not saved");
+    }); 
+};
+let failuar = ()=>{
+    console.log("weak connetction data not saved");
+}
+savetodata("silver", success, failuar);
+        }
+
+
+
+    - resolve and reject - 
+    - states in promises
+        1. rejected = failuar
+        2. pending = no idea 
+        3. fullfiled = complete
+
+    - methods
+
+        1. then and catch
+            fullfiled - then methods
+            catch = reject

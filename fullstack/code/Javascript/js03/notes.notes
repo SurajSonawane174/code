@@ -1,0 +1,271 @@
+------------------ String methods ---------------------
+
+    action that can be performed on a objects
+    
+    - format
+    stringname.methods();
+
+    a. Trim method
+    
+        Trims the whitespaces from the both the ends and returns the new String
+        ************ BUT DO NOT MODIFIES THE ORIGNAL STRING ****************
+        ************ STRINGS ARE IMMUTABLE  ****************
+
+        eg.
+            let name = "           Silver   ";
+            let newname = name.trim();
+            console.log(`here is the name after trim ${name}`);
+            console.log(`here is the new string return by the trim on the name $            {newname}`);
+
+    b. case methods
+        
+        - touppercase()
+        - tolowercase()
+
+        eg. 
+            name = "Suraj Arun SONAWANE";
+            console.log(name.toUpperCase());
+            console.log(name.toLowerCase());
+
+    c. indexOf()
+
+        - returns the first index of occurance of some value in the string or -1 on not found.
+
+        eg. 
+            
+            console.log(name.indexOf("Arun"));
+            console.log(name.indexOf("arun"));
+
+    ################## Method Chaining ################################
+
+    - Using one method one after the other 
+    - order of execution is from the (left to right)
+    name.toLowerCase().trim();
+
+
+    d. slice()
+
+        - returns the part of the orignal string as a new string
+        - str.slice(start, end)
+        ########## Ending index is not included #########################
+
+        eg. 
+            console.log(name.slice(0, 5));
+            console.log(name.slice(5));
+
+    e. Replace and repeate
+        
+        - Searches the value in the string and retrurn the string with Replaceing the given string 
+        - ############## only first occurance will get Replace #################
+
+    d. repeate()
+
+        - to repeate the string  n times
+        str.repeate(4)
+
+        eg.  
+            console.log(name.replace("S", "s"));
+            console.log(name.repeat(7));
+
+
+
+
+------------------------------------------ ARRAY ---------------------------------------------
+
+    - It is a linear connection of the things
+    - Suports indicing 
+    - it's type is Object
+    - we can also stre the different types of data in same array
+    ############# arrays are mutable ##################
+
+    eg. 
+
+
+        let family = ["anna", "mummy", "didi", "jully"];
+        console.log(family);
+        console.log(family[0]);
+        console.log(family[-1]);
+
+    output.
+
+        [ 'anna', 'mummy', 'didi', 'jully' ]
+        anna
+        undefined
+
+    a. array creation
+
+        eg.
+            let info = ["suraj arun sonawane", 612303174, 8.23, "I-319"];
+            console.log(info);
+
+        output. 
+            [ 'suraj arun sonawane', 612303174, 8.23, 'I-319' ]
+
+
+        eg.
+            family[3]  ="chuha";
+            family[4] = "kubiiiiii";
+            console.log(family);
+
+        output. 
+            [ 'anna', 'mummy', 'didi', 'chuha', 'kubiiiiii' ]
+
+
+---------------------------- array methods -------------------------
+
+a. push()
+    - add to end
+    eg. 
+        info.push(20);
+        console.log(info);
+    output.
+        [ 'suraj arun sonawane', 612303174, 8.23, 'I-319', 20 ]
+b. pop()
+    - delete from the end and returns it .
+
+    eg. 
+        console.log(info.pop());
+        console.log(info);
+
+    output.
+        [ 'suraj arun sonawane', 612303174, 8.23, 'I-319']   
+
+
+c. unshift()
+    - add to start
+   
+d. shift()
+    - delete from the start and returns it .
+
+    eg. 
+
+        info.unshift(20);
+        console.log(info);
+
+        console.log(info.shift());
+        console.log(info);
+
+    output.
+        [ 20, 'suraj arun sonawane', 612303174, 8.23, 'I-319' ]
+        20
+        [ 'suraj arun sonawane', 612303174, 8.23, 'I-319' ]
+
+
+**** practice question
+
+    for the given start state of the array ,change it to the final state using method
+
+    start: ['january', 'july', 'march', 'august']
+    end: ['july', 'june', 'march', 'august']
+
+e. indexOf()
+    - return the index of something
+    - same as of the srtings
+
+f. includes()
+    - Searches for value    
+    - return true or false
+
+    eg. 
+        console.log(start.indexOf("march"));
+        console.log(start.indexOf("March"));
+        console.log(start.includes("march"));
+        console.log(start.includes("March"));
+
+    output. 
+            2
+            -1
+            true
+            false
+
+g. concatenation and reverse
+
+    concat:
+        - merges two array
+        - returns the new array with merging of the two array
+        - doesn't change the orignal array.
+
+    reverse:
+        - it reverse the orignal array and also return the new array
+        
+    eg.
+        arr1 = [1, 2,3 ,4, 5]
+        (5) [1, 2, 3, 4, 5]
+
+        arr2 = [6, 7, 8, 9]
+        (4) [6, 7, 8, 9]
+
+        arr1.concat(arr2)
+        (9) [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        arr1.reverse();
+        (5) [5, 4, 3, 2, 1]
+
+        arr1
+        (5) [5, 4, 3, 2, 1]    
+
+h. slice and splice
+
+    slice:
+        - copy of the portion
+        - starting index and Ending index : input
+        - Ending index is not included.
+        - no change in orignal array.
+
+
+    eg. 
+        (without parameter return the copy of the array)
+        colors = ["red", "yellow", "blue", "orange ", "pink", "white"]
+        (6) ['red', 'yellow', 'blue', 'orange ', 'pink', 'white']
+
+        {}
+        colors.slice()  
+        (6) ['red', 'yellow', 'blue', 'orange ', 'pink', 'white']
+
+        
+        colors.slice(2)
+        (4) ['blue', 'orange ', 'pink', 'white']
+
+        colors.slice(2, 3)
+        ['blue']
+
+        colors.slice(-2)
+        (2) ['pink', 'white']    
+
+    splice:
+        - equivalant to the "removes , replace, add elements in place"
+        - splice(start, delete_count, item0.......itemN)
+        - change are in the orignal array
+        - addition of the items is from the start.
+        - delete is from the start.
+
+
+        eg. 
+            colors = ["red", "yellow", "blue", "orange ", "pink", "white"]
+            (6) ['red', 'yellow', 'blue', 'orange ', 'pink', 'white']
+
+            colors.splice(2)
+            4) ['blue', 'orange ', 'pink', 'white']
+
+            colors
+            2) ['red', 'yellow']
+
+            colors.splice(0, 0, "blue", "orange", "pink", "white")
+            []
+
+            colors
+            6) ['blue', 'orange', 'pink', 'white', 'red', 'yellow']
+
+            colors.splice(0, 1)
+            'blue'
+
+            colors
+            5) ['orange', 'pink', 'white', 'red', 'yellow']
+
+    i. sort
+
+        - sort the array      
+        - change are in the orignal array  
+        - first convert the array into the string and then sort
+        - so not usefull for the numbers
+        

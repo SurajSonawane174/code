@@ -1,0 +1,102 @@
+1. --------------console.log()----------------
+
+to print  anything in the console we need to use the console.log("Hello world !")
+eg. 
+    console.log("suraj arun Sonawane", 612303174)
+    output : suraj arun Sonawane 612303174
+    (it introduces the extra space between the two values)
+
+2. -----------------------Linking of js file--------------------
+    <script src="app.js"></script>
+    in the body and also in the head
+
+3. --------------------------Template literals------------------
+
+4. -------------------Operator -----------------
+
+a. arithmatic Operator
+This is a general ORDER of solving expression
+
+**
+*, /, %
++, -
+
+{right to left execuition}
+
+b. assignment Operator
+
+=
++=
+-=
+/=
+*=
+
+c. Unary Operator
+
+a--
+a++
+--a
+++a
+
+d comparison Operator
+
+    < {less than}
+    > {greater than}
+    <= {less than equal}
+    >=  {greater than equal }
+    == {checks the values on the both side}
+    != {not equal to}
+    ===  {checks values and types on both side}
+
+e. Logical Operator
+    &&  and
+    ||  or
+    !  not
+
+5. -------------------Conditional statements---------------
+
+a. if else
+b. nested if else
+c. switch case
+
+a. if else 
+    eg.
+    if(age >= 18){
+        console.log("you can vote ");
+    }else{
+        console.log("you cannot vote");
+    }
+
+b. nested if else
+    eg. 
+    
+    if(cgpa > 5){
+        if(cgpa > 8){
+            console.log("you passed the exam with good marks");
+        }else{
+            console.log("you just passed the exam");
+        }  
+    }else{
+        console.log("you are failed in this exam, try again!");
+
+    }
+
+c. switch case
+    eg.     
+    let color = "reed";
+    switch(color){
+        case "red" :
+            console.log("it is a red color");
+            break;
+        case "blue" :
+            console.log("it is a blue color");
+            break;
+        default :
+            console.log("the color is not in the list");
+
+
+    }
+
+----------------------alerts and prompts-------------------------
+
+it is usefull to take the input from the user

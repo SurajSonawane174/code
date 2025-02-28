@@ -1,0 +1,156 @@
+------------------variable-----------------
+it is the name of the storage location
+
+----------------data types ----------------
+NUmber 
+Boolean 
+String
+Undefined 
+Null
+Bigint
+Symbol
+
+-------------operations in js----------------
+
+addition
+substraction
+division
+multiplication
+modulo
+exponentail
+
+
+------------NAN in js --------------------
+
+Not A NUmber
+0 / 0
+NAN -1
+NAN + NAN
+NAN * NAN
+
+-------------------Operator Precendance-----------------
+
+This is a general ORDER of solving expression
+()
+**
+*, /, %
++, -
+
+{right to left execution}
+
+---------------------Assingment Operator---------------
+
+=
++=
+-=
+/=
+*=
+
+
+------------------Unary Operator-----------------------
+
+a--
+a++
+--a
+++a
+
+--------------------------Identifier Rules---------------------
+
+All javascript variable must be identified by unique name
+
+- Names can either contain letter, NUmber, underscore, and dolar sign
+- Names must begin with letter
+- Names can also begins with dolar, underscore
+- Names are case sensitive
+- cannot use reeserved words
+
+------------------Boolean in js-----------------
+
+true and false
+true + true
+2
+true - true
+0
+false -true
+-1
+true -true
+0
+true - false
+1
+
+--------------------------String in js--------------------
+String are the text or sequence of the charcters
+
+name = "Suraj Arun Sonawane"    
+we can aslo use the '<String>' {single ''}
+name = 'Suraj Arun Sonawane'
+
+let name = Suraj
+
+SRTINGS SUPPORTS THE INDICING 
+
+S u r a j
+0 1 2 3 4 
+
+name[0] = S
+name[1] = u
+name[2] = r
+name[3] = a
+name[4] = j
+
+name.length = 5
+
+name[100] it gives Undefined
+
+ ####################-----CONCATINATION OF THE SRTINGS
+
+ "SURAJ" + " " + "ARUN" + " " + "SONAWANE"
+'SURAJ ARUN SONAWANE'
+
+first = "Suraj"
+'Suraj'
+second = "Arun"
+'Arun'
+last = "Sonawane"
+'Sonawane'
+space = " "
+' '
+first + space + second + space + last
+'Suraj Arun Sonawane'
+
+******************important
+"HelioCoder" + 174
+
+'HelioCoder174'
+
+<if we try to add the String and the NUmber NUmber will get casted to the String and then it wil add the both the Strings>
+
+"HelioCoder" + true
+'HelioCodertrue'
+
+"HelioCoder" + NaN
+'HelioCoderNaN'
+
+
+---------------------NULL and Undefined in js-----------------------
+
+1. UNDEFINED
+    A   variable that has not been assigned a value is of Undefined type.
+
+    eg.
+
+    let a
+    undefined
+    a
+
+undefined
+
+2. NULL
+    The NULL represent the intentional absence of the objects
+
+    eg.
+
+    let a =null
+    undefined
+    a
+    null    

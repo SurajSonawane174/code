@@ -1,0 +1,58 @@
+-------------------templating------------------
+
+    - EJS(embended js template)
+    - EJS is a simple template language that let you genrate html markup with plain js.
+    - tools: handbars, EJS.
+    
+
+---------we need to add some lines of the codes in our file----------------
+    
+    - app.set("view engine", "ejs");
+    - app.get("/", (req, res)=>{
+        res.render("home.ejs");
+    });
+
+    - if we want to send the file from the send command in the js 
+    but we cant send the whole file
+    thats why we uses the render command by which we can send the whole file with .ejs
+
+
+-----------------itnerpoalation syntax------------------
+    
+    - itnerpoalation is the  embending expression into the markup text.
+    - html me expression , jinki values badme evaluate hogi
+    - in short using ejs we are making the html dynamic.
+    - NOTE THAT OUTPUT WILL BE STRING FORM
+    -Tags
+        <% 'Scriptlet' tag, for control-flow, no output
+        <%_ ‘Whitespace Slurping’ Scriptlet tag, strips all whitespace before it
+        <%= Outputs the value into the template (HTML escaped)
+        <%- Outputs the unescaped value into the template
+        <%# Comment tag, no execution, no output
+        <%% Outputs a literal '<%'
+        %> Plain ending tag
+        -%> Trim-mode ('newline slurp') tag, trims following newline
+        _%> ‘Whitespace Slurping’ ending tag, removes all whitespace after it
+
+-----------------------parsing the date to EJS------------------------
+
+    - if some data is come from the backend how we can parse the data in the ejs
+
+        res.render("filename", {object(key value pair)})
+
+------------------------conditional  and loop statements in EJS----------------------
+
+    -<% if(dicevalue == 6){%>
+        <h3>Nice , roll the dice again</h3>
+    <% }%>
+    <h3>Subjects for the Sem 4</h3>
+    <% for(sub of subjects) {%>
+        <li><%= sub %></li>
+    <% } %>
+
+---------------includes-------------------------
+
+    - it is way for the creating the sub-templates.
+    - just like we want to add the subcontainer in the main html template.
+    - <%- Outputs the unescaped value into the template
+    - <%-include("includes/head.ejs") %>

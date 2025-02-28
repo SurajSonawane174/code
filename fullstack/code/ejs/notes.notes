@@ -1,0 +1,66 @@
+--------------frameworks-------------------------------------
+    - a frameworks is a prewritten code that provides the structure for developing the software applicationa
+    - express
+
+------------------library-----------------------------
+    - library is a collection of the prewritten code that can be used to perform the specific task
+    - axios
+
+-----------Express------------------
+    - it is Node.js application framework that helps us to make web application
+    - it is used for sever side programming.
+    - it listens for the incoming requests
+    - it also parse the requests        
+    - to match the response  with routs
+
+
+------------getting started with Express------------------
+    
+    - Ports -
+        Ports are the logical endpoints of the network connections that is used  to exchange the information between the web sever and web client
+        - connections points of the network for building the network
+        - 3000, 8080
+
+---------------getting requests with Express---------------
+
+    - it will recive all the requests
+    - app.use((req, res)=>{
+        console.log("new incoming request");
+    });
+
+
+---------------sending a response---------------
+    - for this we will study two objects 
+        - request (paraters)
+        - response(callback functions)
+
+    - request
+        - it is http request which is text base request(cause sever may be build in the other languages)
+        -  but express convert that text in to the objects(json representation)
+
+        - this is also known as parsing
+        - because other language should also understand the request
+
+------routing---------------------
+
+    - it is a process of selceting a path for trafic in a network or accross the network
+    - app.get("/apple", (res, req)=>{
+        res.send({
+            name: "apple",
+            color: "crimson red",
+
+        });
+    });
+
+
+-------------------Installing Nodemon-------------------
+    - to automatically restarts server with change in code
+
+
+---------------path parametes---------------------
+    - path as variables
+    - we can send the variables to detect te path
+    
+------------query string---------------------
+    - whatever we search in it goes in q=___?
+

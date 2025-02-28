@@ -1,0 +1,99 @@
+--------------DOM (Document Object Model) Notes:-----------------
+    - it is a tree structure of objects
+    - each HTML element becomes a node in the tree
+    - parent/child relationships between elements are preserved
+    - can be manipulated using JavaScript
+
+1. Structure:
+   document
+      |
+      +-- html
+          |
+          +-- head
+          |    |
+          |    +-- meta
+          |    +-- title
+          |    +-- style
+          |
+          +-- body
+               |
+               +-- div.navbar
+                    |
+                    +-- a (Home)
+                    +-- a (About) 
+                    +-- a (Services)
+                    +-- a (Contact)
+
+2. Key Concepts:
+- DOM represents HTML as a tree structure of objects
+- Each HTML element becomes a node in the tree
+- Parent/child relationships between elements are preserved
+- Can be manipulated using JavaScript
+
+3. Common DOM Methods:
+- document.getElementById()
+- document.getElementsByClassName() 
+- document.getElementsByTagName()
+- document.querySelector()
+- document.querySelectorAll()
+
+4. DOM Navigation:
+- parentNode
+- childNodes
+- firstChild
+- lastChild
+- nextSibling
+- previousSibling
+
+5. DOM Manipulation:
+- createElement()
+- appendChild()
+- removeChild()
+- replaceChild()
+- innerHTML -> shows the full mark up
+- textContent
+- getAttribute(att)
+- setAttribute(att,  val)
+- innertext()
+
+6. Events:
+- addEventListener()
+- removeEventListener()
+- Common events: click, mouseover, keydown, load
+
+7. Example from navbar:
+- Root element: <div class="navbar">
+- Contains 4 child <a> elements
+- Each <a> has attributes (href, class)
+- Style applied via CSS selectors
+
+
+------------------- element selectors-------------
+------------classlist----------
+- classlist.add()
+- classlist.remove()
+- classlist.contain()
+- classlist.toggle()
+
+
+
+-----------------Navigation -----------------
+
+- parentm element
+- children
+- previous element nextSibling
+- next element Sibling
+
+------------ adding element on page------------
+- append child(element) // parent ke element ke andar change 
+- append(element) // element ke ndar hi last me  changes
+- prepend(element) // element ke andar startig me changes
+- insertadjacent(where,element) // exactly kaha pe add karnna hai 
+
+- steps
+     document.createElement('p')
+    make a Object for the inserting the element
+
+----------------- remove the element from the page----------------
+remove
+removeChild

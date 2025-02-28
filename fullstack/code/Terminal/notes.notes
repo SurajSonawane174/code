@@ -1,0 +1,19 @@
+1. command line - any interface that is begin used by entering the textual content  or command
+2. Terminal - this is s type of the command line
+3. console - command line interface used to work with your computer
+4. shell- a program running n Terminal
+5. bash - a popular shell on mac os/linux
+6. z-shell = another shell default
+
+
+--------------------basic command------------------
+1. ls
+2. clear
+3. pwd
+4. navigation
+    cd 
+5. mkdir   -> it is uded to make the folders
+6. flags-
+
+    flags are the charcter that we passed with commands to modify their behaviour
+    

@@ -1,0 +1,38 @@
+----------------------this in js----------------------------
+    "this " keyword refers to the object that is executing the current piece of code
+
+---------------arrow function---------------------
+
+
+const sum = (a, b)=>{
+    return a + b;
+};
+console.log(sum(345, 345));
+
+    - nameless function
+************implicit return in arrow function*****************
+
+    - if arrow function is only doingn the work to return the single value we can skip the return word
+
+    const sum = (a, b)=>{
+       return a + b;
+    };
+    this can be written as 
+    const sum = (a, b)=> a + b;
+
+
+-----------------timeout function--------------
+
+    - this is a function of the window object
+    - this is used when we want to function to wait for the execution
+    - but code doesnt wait for this timeout function
+    - other function will continued the code flow
+
+----------------set interval funcion -----------------
+
+    - same as timeout function but it will execute continiously after the setted time interval
+
+    - to stop this we will use 
+    clear interval funcion using id
+     
+

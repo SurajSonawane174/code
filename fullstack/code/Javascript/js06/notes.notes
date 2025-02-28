@@ -1,0 +1,24 @@
+-----------------functions in js---------------------
+
+    - block of code that performs the specific work or exection
+    format. 
+
+        function function_name(){
+            //do something
+
+        }
+
+-------------------scopes---------------
+    1. function scope
+    2. block scope
+    3. lexical scope
+    4. global scope
+
+---------------------function expression----------------
+    - we are defining the function and storing it in a varaible
+
+-----------------high order function ------------------------
+
+    - take one more function as a input (argument)
+    - returns a function
+    
