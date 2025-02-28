@@ -1,0 +1,7 @@
+tries also known as prefix trees ans also the retrival trees(search ki tc is much optimized)
+generic trees(K ARRAY TREE)
+GENERIC =  more than one childs for one node
+tc to search the word in the tree is O(L) wehre L is the length oif the word also for the insert the new word
+
+
+          
